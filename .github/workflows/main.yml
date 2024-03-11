@@ -22,17 +22,17 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
-        working-directory: ./Terraform-Eks
+        working-directory: ./
         run: |
           terraform init             
       - name: Terraform Format
-        working-directory: ./Terraform-Eks
+        working-directory: ./
         run: terraform fmt
 
       - name: Terraform Plan
-        working-directory: ./Terraform-Eks
+        working-directory: ./
         run: terraform plan 
 
       - name: Terraform Apply
-        working-directory: ./Terraform-Eks
+        working-directory: ./
         run: terraform apply 
